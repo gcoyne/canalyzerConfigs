@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="vehicleDash">
+    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl2" Children="Controls" ControlName="Check Box 2">
+      <Property Name="Name">CheckBoxControl2</Property>
+      <Property Name="Size">99, 17</Property>
+      <Property Name="Location">662, 23</Property>
+      <Property Name="Text">Random RPM?</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;randomRpm;1;;;-1;;;</Property>
+      <Property Name="TabIndex">34</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl5" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl5</Property>
+      <Property Name="Size">272, 20</Property>
+      <Property Name="Location">544, 314</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Text</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;600000</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">vehicleData.vin:</Property>
+      <Property Name="DescriptionSize">84, 20</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;vin;4;;;-1;;;</Property>
+      <Property Name="TabIndex">26</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl4" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl4</Property>
+      <Property Name="Size">272, 20</Property>
+      <Property Name="Location">544, 262</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Double</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;600000</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">vehicleData.totalVehicleDistance:</Property>
+      <Property Name="DescriptionSize">173, 20</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;totalVehicleDistance;2;;;-1;;;</Property>
+      <Property Name="TabIndex">19</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl3" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl3</Property>
+      <Property Name="Size">272, 20</Property>
+      <Property Name="Location">544, 288</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Double</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;600000</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">vehicleData.speed:</Property>
+      <Property Name="DescriptionSize">101, 20</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;speed;2;;;-1;;;</Property>
+      <Property Name="TabIndex">18</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl2" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl2</Property>
+      <Property Name="Size">272, 20</Property>
+      <Property Name="Location">544, 236</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Decimal</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;600000</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">vehicleData.rpm:</Property>
+      <Property Name="DescriptionSize">89, 20</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;rpm;1;;;-1;;;</Property>
+      <Property Name="TabIndex">17</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl1</Property>
+      <Property Name="Size">272, 20</Property>
+      <Property Name="Location">544, 210</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="ValueDisplay">Double</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;2;0;600000</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">vehicleData.hours:</Property>
+      <Property Name="DescriptionSize">98, 20</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;hours;2;;;-1;;;</Property>
+      <Property Name="TabIndex">16</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl4" ControlName="LCD Control">
+      <Property Name="Name">LCDControl4</Property>
+      <Property Name="Size">98, 27</Property>
+      <Property Name="Location">356, 173</Property>
+      <Property Name="NumberIntDigits">4</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;rpm;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl3" ControlName="LCD Control">
+      <Property Name="Name">LCDControl3</Property>
+      <Property Name="Size">79, 27</Property>
+      <Property Name="Location">94, 173</Property>
+      <Property Name="NumberIntDigits">3</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;speed;2;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.CheckBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="CheckBoxControl1" Children="Controls" ControlName="Check Box">
+      <Property Name="Name">CheckBoxControl1</Property>
+      <Property Name="Size">92, 17</Property>
+      <Property Name="Location">662, 3</Property>
+      <Property Name="Text">is Engine On?</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;engineOn;1;;;-1;;;</Property>
+      <Property Name="TabIndex">11</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StartStopControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StartStopControl1" Children="Controls" ControlName="Start Stop Control">
+      <Property Name="Name">StartStopControl1</Property>
+      <Property Name="Size">112, 56</Property>
+      <Property Name="Location">544, 3</Property>
+      <Property Name="TabIndex">10</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl2" ControlName="LCD Control">
+      <Property Name="Name">LCDControl2</Property>
+      <Property Name="Size">189, 34</Property>
+      <Property Name="Location">272, 227</Property>
+      <Property Name="DecimalPlaces">2</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;hours;2;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl1" ControlName="LCD Control">
+      <Property Name="Name">LCDControl1</Property>
+      <Property Name="Size">189, 34</Property>
+      <Property Name="Location">17, 227</Property>
+      <Property Name="NumberIntDigits">8</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;totalVehicleDistance;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl2" Children="Controls" ControlName="Group Box 2">
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl2" Children="Controls" ControlName="Track Bar 2">
+        <Property Name="Name">TrackBarControl2</Property>
+        <Property Name="Size">256, 41</Property>
+        <Property Name="Location">6, 18</Property>
+        <Property Name="Maximum">3000</Property>
+        <Property Name="MaximumDouble">3000</Property>
+        <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;rpm;1;;;-1;;;</Property>
+        <Property Name="TabIndex">0</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl2</Property>
+      <Property Name="Size">272, 65</Property>
+      <Property Name="Location">544, 139</Property>
+      <Property Name="Text">RPM</Property>
+      <Property Name="TabIndex">6</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">17, 23</Property>
+      <Property Name="UsedLEDColorOn">GreenYellow</Property>
+      <Property Name="UsedLEDColorOff">Red</Property>
+      <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;engineOn;1;;;-1;;;</Property>
+      <Property Name="TabIndex">5</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.GroupBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="GroupBoxControl1" Children="Controls" ControlName="Group Box">
+      <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="Track Bar">
+        <Property Name="Name">TrackBarControl1</Property>
+        <Property Name="Size">256, 47</Property>
+        <Property Name="Location">6, 15</Property>
+        <Property Name="Maximum">125</Property>
+        <Property Name="MaximumDouble">125</Property>
+        <Property Name="SymbolConfiguration">5;128;stti;;vehicleData;speed;1;;;-1;;;</Property>
+        <Property Name="TabIndex">3</Property>
+      </Object>
+      <Property Name="Name">GroupBoxControl1</Property>
+      <Property Name="Size">272, 68</Property>
+      <Property Name="Location">544, 65</Property>
+      <Property Name="Text">Speed</Property>
+      <Property Name="TabIndex">4</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="AnalogGaugeControl2" ControlName="Analog Gauge 2">
+      <Property Name="Name">AnalogGaugeControl2</Property>
+      <Property Name="Size">266, 209</Property>
+      <Property Name="Location">272, 0</Property>
+      <Property Name="BackgroundColor">White</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXVZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTEwLjAuMTI3LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAYEAAAANlZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkRlc2lnbi5HYXVnZUNyaXRpY2FsUHJvcGVydGllcwYFAAAAMlZvaWQgLmN0b3IoRG91YmxlLCBEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUpBgYAAABQLmN0b3IoU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSkBAAAACgs=">
+        <Argument>0</Argument>
+        <Argument>2400</Argument>
+        <Argument>0</Argument>
+        <Argument>900</Argument>
+        <Argument>1800</Argument>
+      </Property>
+      <Property Name="GaugeFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="LegendText">RPM</Property>
+      <Property Name="ScaleAngle">180</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;;EEC1;EngSpeed;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="AnalogGaugeControl1" ControlName="Analog Gauge">
+      <Property Name="Name">AnalogGaugeControl1</Property>
+      <Property Name="Size">266, 206</Property>
+      <Property Name="Location">0, 3</Property>
+      <Property Name="BackgroundColor">White</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXVZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTEwLjAuMTI3LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAYEAAAANlZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkRlc2lnbi5HYXVnZUNyaXRpY2FsUHJvcGVydGllcwYFAAAAMlZvaWQgLmN0b3IoRG91YmxlLCBEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUpBgYAAABQLmN0b3IoU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSkBAAAACgs=">
+        <Argument>0</Argument>
+        <Argument>240</Argument>
+        <Argument>0</Argument>
+        <Argument>60</Argument>
+        <Argument>110</Argument>
+      </Property>
+      <Property Name="GaugeFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="LegendText">KM/H</Property>
+      <Property Name="ScaleAngle">180</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;Engine1;CCVS;WheelBasedVehicleSpeed;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">844, 355</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>

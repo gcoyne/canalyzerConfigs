@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Dashboard">
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">49, 29</Property>
+      <Property Name="Location">709, 197</Property>
+      <Property Name="Font">Microsoft Sans Serif, 18pt</Property>
+      <Property Name="Text">KM</Property>
+      <Property Name="ForeColor">DarkRed</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl1" ControlName="LCD Control">
+      <Property Name="Name">LCDControl1</Property>
+      <Property Name="Size">155, 27</Property>
+      <Property Name="Location">568, 199</Property>
+      <Property Name="NumberIntDigits">7</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;;VD;TotalVehicleDistance;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TrackBarControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="TrackBarControl1" Children="Controls" ControlName="TrackBar_WheelBAsedVehicleSpeed">
+      <Property Name="Name">TrackBarControl1</Property>
+      <Property Name="Size">403, 47</Property>
+      <Property Name="Location">462, 271</Property>
+      <Property Name="Maximum">150</Property>
+      <Property Name="DisplayMinMax">True</Property>
+      <Property Name="TickStyle">TopLeft</Property>
+      <Property Name="LargeChange">1</Property>
+      <Property Name="LargeChangeDouble">1</Property>
+      <Property Name="MaximumDouble">150</Property>
+      <Property Name="DisplayValue">True</Property>
+      <Property Name="CommitValue">OnlyLastValue</Property>
+      <Property Name="SymbolConfiguration">5;128;Speed_Alert;;Test;Member1;1;;;-1;;;</Property>
+      <Property Name="TabIndex">8</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">50, 29</Property>
+      <Property Name="Location">255, 197</Property>
+      <Property Name="Font">Microsoft Sans Serif, 18pt</Property>
+      <Property Name="Text">Hrs</Property>
+      <Property Name="ForeColor">DarkRed</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl2" ControlName="LCD Control 2">
+      <Property Name="Name">LCDControl2</Property>
+      <Property Name="Size">136, 27</Property>
+      <Property Name="Location">133, 199</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;;HOURS;EngTotalHoursOfOperation;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StartStopControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="StartStopControl1" Children="Controls" ControlName="Start Stop Control">
+      <Property Name="Name">StartStopControl1</Property>
+      <Property Name="Size">112, 56</Property>
+      <Property Name="Location">16, 3</Property>
+      <Property Name="TabIndex">3</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="AnalogGaugeControl2" ControlName="Analog Gauge">
+      <Property Name="Name">AnalogGaugeControl2</Property>
+      <Property Name="Size">434, 293</Property>
+      <Property Name="Location">443, 3</Property>
+      <Property Name="LegendColor">BlanchedAlmond</Property>
+      <Property Name="CenterColor">BlanchedAlmond</Property>
+      <Property Name="BackgroundColor">Desktop</Property>
+      <Property Name="ArrowColor">BlanchedAlmond</Property>
+      <Property Name="IsMargin">False</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXVZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTEwLjAuMTI3LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAYEAAAANlZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkRlc2lnbi5HYXVnZUNyaXRpY2FsUHJvcGVydGllcwYFAAAAMlZvaWQgLmN0b3IoRG91YmxlLCBEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUpBgYAAABQLmN0b3IoU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSkBAAAACgs=">
+        <Argument>0</Argument>
+        <Argument>150</Argument>
+        <Argument>0</Argument>
+        <Argument>80</Argument>
+        <Argument>105</Argument>
+      </Property>
+      <Property Name="TicksColor">BlanchedAlmond</Property>
+      <Property Name="GaugeFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="CenterRadius">4</Property>
+      <Property Name="LegendText">km/hr</Property>
+      <Property Name="IsFrame">False</Property>
+      <Property Name="ScaleAngle">180</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;Engine1;CCVS;WheelBasedVehicleSpeed;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.AnalogGaugeControl, Vector.CANalyzer.Panels.AnalogGauge, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="AnalogGaugeControl1" ControlName="Analog Gauge">
+      <Property Name="Name">AnalogGaugeControl1</Property>
+      <Property Name="Size">434, 293</Property>
+      <Property Name="Location">3, 3</Property>
+      <Property Name="LegendColor">BlanchedAlmond</Property>
+      <Property Name="CenterColor">BlanchedAlmond</Property>
+      <Property Name="BackgroundColor">Desktop</Property>
+      <Property Name="MarginColor">BlanchedAlmond</Property>
+      <Property Name="ArrowColor">BlanchedAlmond</Property>
+      <Property Name="IsMargin">False</Property>
+      <Property Name="CriticalProps" Member="AAEAAAD/////AQAAAAAAAAAEAQAAAC9TeXN0ZW0uUmVmbGVjdGlvbi5NZW1iZXJJbmZvU2VyaWFsaXphdGlvbkhvbGRlcgcAAAAETmFtZQxBc3NlbWJseU5hbWUJQ2xhc3NOYW1lCVNpZ25hdHVyZQpTaWduYXR1cmUyCk1lbWJlclR5cGUQR2VuZXJpY0FyZ3VtZW50cwEBAQEBAAMIDVN5c3RlbS5UeXBlW10GAgAAAAUuY3RvcgYDAAAAXVZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkFuYWxvZ0dhdWdlLCBWZXJzaW9uPTEwLjAuMTI3LjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAYEAAAANlZlY3Rvci5DQU5hbHl6ZXIuUGFuZWxzLkRlc2lnbi5HYXVnZUNyaXRpY2FsUHJvcGVydGllcwYFAAAAMlZvaWQgLmN0b3IoRG91YmxlLCBEb3VibGUsIERvdWJsZSwgRG91YmxlLCBEb3VibGUpBgYAAABQLmN0b3IoU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSwgU3lzdGVtLkRvdWJsZSkBAAAACgs=">
+        <Argument>0</Argument>
+        <Argument>4000</Argument>
+        <Argument>0</Argument>
+        <Argument>1500</Argument>
+        <Argument>3000</Argument>
+      </Property>
+      <Property Name="TicksColor">BlanchedAlmond</Property>
+      <Property Name="GaugeFont">Microsoft Sans Serif, 8.25pt</Property>
+      <Property Name="CenterRadius">4</Property>
+      <Property Name="LegendText">RPM</Property>
+      <Property Name="ScaleAngle">180</Property>
+      <Property Name="SymbolConfiguration">5;2;J1939;;EEC1;EngSpeed;1;CAN1;;-1;;;</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">887, 454</Property>
+    <Property Name="BackColor">Black</Property>
+    <Property Name="BorderStyle">Fixed3D</Property>
+    <Property Name="IsProportional">True</Property>
+  </Object>
+</Panel>

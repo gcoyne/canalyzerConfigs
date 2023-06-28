@@ -1,0 +1,174 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  msTimer STTI_TIMER;
+  msTimer STTI_HOURS_TIMER;
+  msTimer STTI_RPM_TIMER;
+
+  pg EEC1 EEC1_STTI;
+  pg CCVS CCVS_STTI;
+  pg VI VI_STTI = { DLC = 17 };
+  pg VD VD_STTI;
+  pg HOURS HOURS_STTI;
+  
+  int i;
+  int curRpm;
+  int isGoingUp = 1;
+}
+
+void sendEngSpeed()
+{
+  EEC1_STTI.EngSpeed.phys = sysGetVariableInt(sysvarMember::stti::vehicleData.rpm);
+  output(EEC1_STTI);
+}
+
+void sendVehicleSpeed()
+{
+  CCVS_STTI.WheelBasedVehicleSpeed.phys = sysGetVariableFloat(sysvarMember::stti::vehicleData.speed);
+  output (CCVS_STTI);
+}
+
+void sendVD()
+{
+  VD_STTI.TotalVehicleDistance.phys = sysGetVariableFloat(sysvarMember::stti::vehicleData.totalVehicleDistance);
+  output (VD_STTI);
+}
+
+void sendVI ()
+{
+  Char vinvin[17];
+  sysGetVariableString(sysvarMember::stti::vehicleData.vin, vinvin, 18);
+  
+  for(i=0;i<17;i++) 
+  {
+    VI_STTI.byte(i) = vinvin[i];
+  } 
+  output (VI_STTI);
+}
+
+void sendHours ()
+{
+  HOURS_STTI.EngTotalHoursOfOperation.phys = sysGetVariableFloat(sysvarMember::stti::vehicleData.hours);
+  output (HOURS_STTI);
+}
+
+On start
+{
+  j1939SetSourceAddress(HOURS_STTI, 0);
+  j1939SetSourceAddress(EEC1_STTI, 0);
+  j1939SetSourceAddress(CCVS_STTI, 0);
+  j1939SetSourceAddress(VD_STTI, 0);
+  j1939SetSourceAddress(VI_STTI, 0);
+  
+  setTimer(STTI_TIMER, 1000);
+  setTimer(STTI_RPM_TIMER, 100);
+  setTimer(STTI_HOURS_TIMER, 360);
+}
+
+On sysvar_change sysvarMember::stti::vehicleData.engineOn
+{
+  write("Updating engine On state:%i", sysGetVariableInt(sysvarMember::stti::vehicleData.engineOn));
+  if(sysGetVariableInt(sysvarMember::stti::vehicleData.engineOn) == 1 && sysGetVariableInt(sysvarMember::stti::vehicleData.rpm) < 1) {
+    sysSetVariableInt(sysvarMember::stti::vehicleData.rpm, 900);
+  }
+}
+
+On timer STTI_RPM_TIMER
+{
+  if(sysGetVariableInt(sysvarMember::stti::vehicleData.randomRpm) > 0) {
+    curRpm = sysGetVariableInt(sysvarMember::stti::vehicleData.rpm);
+    if(sysGetVariableInt(sysvarMember::stti::vehicleData.engineOn) == 1) {
+      if(isGoingUp == 1) 
+      {
+        sysSetVariableInt(sysvarMember::stti::vehicleData.rpm, curRpm + random(64));
+      } else if(isGoingUp == 0) {
+        sysSetVariableInt(sysvarMember::stti::vehicleData.rpm, curRpm - random(64));
+      }
+      
+      if (isGoingUp == 1 && curRpm > 1800){
+        isGoingUp = 0;
+      } else if(isGoingUp == 0 && curRpm < 1000) {
+        isGoingUp = 1;
+      }
+    }
+  } else {
+    sysSetVariableInt(sysvarMember::stti::vehicleData.rpm, 0);
+  }
+  setTimer(STTI_RPM_TIMER, 1000);
+}
+
+On pg RQST
+{
+  //Request from the VGM, response here.
+  
+  //write(getThisMessage(this, 8));
+}
+
+On timer STTI_TIMER
+{
+   if(sysGetVariableFloat(sysvarMember::stti::vehicleData.speed)  > 0) {
+    sysSetVariableFloat(sysvarMember::stti::vehicleData.totalVehicleDistance, sysGetVariableFloat(sysvarMember::stti::vehicleData.totalVehicleDistance) + 0.01);
+  }
+  
+  //if(sysGetVariableinT(sysvarMember::stti::vehicleData.rpm)  > 500) {
+  //  sysSetVariableInt(sysvarMember::stti::vehicleData.engineOn, 1);
+  //}
+  
+  sendEngSpeed();
+  sendVehicleSpeed();
+  sendHours();
+  sendVD();
+  sendVI();
+  
+  setTimer(STTI_TIMER, 1000);
+}
+
+On timer STTI_HOURS_TIMER
+{
+  if(sysGetVariableInt(sysvarMember::stti::vehicleData.engineOn) == 1) {
+    sysSetVariableFloat(sysvarMember::stti::vehicleData.hours, sysGetVariableFloat(sysvarMember::stti::vehicleData.hours) + 0.0001);
+  }
+  
+  setTimer(STTI_HOURS_TIMER, 360);
+}
+
+void increaseSpeed()
+{
+  if(sysGetVariableFloat(sysvarMember::stti::vehicleData.speed)  < 150  && sysGetVariableInt(sysvarMember::stti::vehicleData.engineOn)  > 0) {
+    sysSetVariableFloat(sysvarMember::stti::vehicleData.speed, sysGetVariableFloat(sysvarMember::stti::vehicleData.speed) + 1.0);
+  }
+}
+
+void decreaseSpeed()
+{
+  if(sysGetVariableFloat(sysvarMember::stti::vehicleData.speed)  > 0) {
+    sysSetVariableFloat(sysvarMember::stti::vehicleData.speed, sysGetVariableFloat(sysvarMember::stti::vehicleData.speed) - 1.0);
+  } else {
+    sysSetVariableFloat(sysvarMember::stti::vehicleData.speed, 0.0);
+  }
+}
+
+On key 'w'
+{
+  increaseSpeed();
+}
+
+On key '\38'
+{
+  increaseSpeed();
+}
+
+On key '\40'
+{
+  decreaseSpeed();
+}
+
+On key 's'
+{
+  decreaseSpeed();
+}

@@ -1,0 +1,18 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+on signal WheelBasedVehicleSpeed
+{
+  if($WheelBasedVehicleSpeed >= 100)
+    $Overspeed_Alert = 1;
+  else
+    $Overspeed_Alert = 0;
+}
